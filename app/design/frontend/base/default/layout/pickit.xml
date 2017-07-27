@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout>
+	<checkout_onepage_index>
+		<reference name="head">
+			<action method="addJs" ifconfig="carriers/pickitconfig/fancybox">
+				<script>pickit/fancybox/jquery.fancybox.js</script>
+				<params><![CDATA[data-group="js001"]]></params>
+			</action>
+			<action method="addCss" ifconfig="carriers/pickitconfig/fancybox">
+				<stylesheet>css/pickit/fancybox/jquery.fancybox.css</stylesheet>
+			</action>
+		</reference>
+	</checkout_onepage_index>
+	<checkout_onepage_shippingmethod>
+        <block type="pickit/checkout_onepage_shipping_method_available" name="root" output="toHtml" template="pickit/onepage/shipping_method/available.phtml"/>
+    </checkout_onepage_shippingmethod>
+    <checkout_onepage_paymentmethod>
+        <block type="checkout/onepage_payment_methods" name="root" output="toHtml" template="pickit/onepage/payment/methods.phtml">
+        	<action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+        </block>
+    </checkout_onepage_paymentmethod>
+</layout>

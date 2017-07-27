@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<carriers  translate="label" module="pickit">
+			<label>Shipping Methods</label>
+			<tab>sales</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>330</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>          
+			<groups>
+				<pickitconfig translate="label"> 
+					<label>PickIt - Configuración global</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<model>pickit/carrier_pickit</model>
+					<fields>
+						<global_testmode translate="label">
+							<label>Modo Testeo:</label>
+							<comment>
+								<![CDATA[Habilitar o deshabilitar el modo testeo para probarlo en distintos entornos.]]>
+							</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>pickit/config_TestMode</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</global_testmode>
+						<title translate="label">
+							<label>Title:</label>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>13</sort_order>
+						</title>
+						<link_text translate="label">
+							<label>Texto del link:</label>
+							<comment>
+								<![CDATA[Texto del link para abrir el panel PickIt.]]>
+							</comment>
+							<default></default>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>15</sort_order>
+						</link_text>
+                        <apikey translate="label">
+							<label>ApiKey (Retailer):</label>
+							<default></default>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>16</sort_order>
+						</apikey>
+						<apikey_webapp translate="label">
+							<label>ApiKey (WebApp):</label>
+							<comment>
+								<![CDATA[Esta ApiKey se utiliza para obtener detalles de la transaccion (Por ej: etiqueta).]]>
+							</comment>
+							<default></default>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>17</sort_order>
+						</apikey_webapp>
+						<token_id translate="label">
+							<label>Token ID:</label>
+							<default></default>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>18</sort_order>
+						</token_id>
+						<url_webservice_prod translate="label">
+							<label>URL WebService:</label>
+							<default></default>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>19</sort_order>
+						</url_webservice_prod>
+						<url_webservice_test translate="label">
+							<label>URL WebService (Test):</label>
+							<comment>
+								<![CDATA[Se usara este WS cuando el Modo Testeo se encuentre habilitado.]]>
+							</comment>
+							<default></default>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</url_webservice_test>
+						<unidadpeso translate="label">
+							<label>Peso del producto en:</label>
+							<default>kg</default>
+							<frontend_type>select</frontend_type>
+							<source_model>pickit/config_unidadpeso</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>21</sort_order>
+						</unidadpeso>
+						<atributo_peso translate="label">
+							<label>Atributo peso:</label>
+							<default>weight</default>
+							<frontend_type>select</frontend_type>
+							<source_model>pickit/config_atributopeso</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>22</sort_order>
+						</atributo_peso>
+						<global_idusuario translate="label">
+							<label>Identificacion de Usuario:</label>
+							<default>taxvat</default>
+							<frontend_type>select</frontend_type>
+							<source_model>pickit/config_idusuario</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>25</sort_order>
+						</global_idusuario>
+						<global_imposicion translate="label">
+							<label>Imposicion:</label>
+							<frontend_type>select</frontend_type>
+							<source_model>pickit/config_imposicion</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+						</global_imposicion>
+						<disponibleretiro translate="label">
+							<label>Disponible para retiro:</label>
+							<frontend_type>select</frontend_type>
+							<source_model>pickit/config_disponibleretiro</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+						</disponibleretiro>
+						<envio_header translate="label">
+							<label>Configuración del envio PickIt</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>250</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</envio_header>
+						<sallowspecific translate="label">
+                            <label>Disponible en: </label>
+                            <frontend_type>select</frontend_type>
+                            <frontend_class>shipping-applicable-country</frontend_class>
+                            <source_model>adminhtml/system_config_source_shipping_allspecificcountries</source_model>
+                            <sort_order>260</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sallowspecific>
+                        <specificcountry translate="label">
+                            <label>Envio a distintos paises</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>270</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+						<active translate="label">
+                            <label>Habilitado</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>280</sort_order>
+                        </active>
+                        <fancybox translate="label">
+                            <label>Desea agregar fancybox?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>284</sort_order>
+                        </fancybox>
+                        <version_fancy translate="label">
+                            <label>Tiene version de Fancybox 2?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>285</sort_order>
+                            <depends>
+                            	<fancybox>
+                                	<value>0</value>
+                            	</fancybox>
+                            </depends>
+                        </version_fancy>
+                    	<loader_pickit translate="label">
+                    		<label>Loader Pickit</label>
+                    		<comment><![CDATA[Esta imagen sera la que se muestre cuando la extension este cargando los datos de envio.]]></comment>
+                    		<frontend_type>file</frontend_type>
+                    		<backend_model>pickit/adminhtml_system_config_backend_file</backend_model>
+                    		<upload_dir>media/pickit</upload_dir>
+                    		<sort_order>286</sort_order>
+                    		<show_in_default>1</show_in_default>
+                    		<show_in_website>1</show_in_website>
+                    		<show_in_store>1</show_in_store>
+                    	</loader_pickit>
+                        <description translate="label">
+                            <label>Descripción</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>290</sort_order>
+                        </description>
+                        <precio translate="label">
+                            <label>Precio :</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>pickit/config_precio</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>310</sort_order>
+                        </precio>
+                        <regla translate="label">
+                            <label>Precio personalizado (%):</label>
+                            <comment>
+                            <![CDATA[Usar . en valores con decimales<br> <span class="notice">Ejemplo: 20.83 </span>]]>
+                            </comment>
+                            <default>0</default>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>320</sort_order>
+                            <depends>
+                            	<precio>
+                                	<value>porcentaje</value>
+                            	</precio>
+                            </depends>
+                        </regla>
+                        <preciofijo translate="label">
+                            <label>Precio Fijo:</label>
+                            <comment>
+                            <![CDATA[Usar . en valores con decimales<br> <span class="notice">Ejemplo: 20.83 </span>]]>
+                            </comment>
+                            <default>0</default>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>330</sort_order>
+                            <depends>
+                            	<precio>
+                                	<value>fijo</value>
+                            	</precio>
+                            </depends>
+                        </preciofijo>
+					</fields>
+				</pickitconfig>
+			</groups>
+		</carriers>
+	</sections>
+</config>
